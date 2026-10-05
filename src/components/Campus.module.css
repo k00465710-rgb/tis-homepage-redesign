@@ -1,0 +1,131 @@
+.campus {
+  padding: 130px 40px;
+  background: #17251d;
+  color: #f5f1e8;
+}
+
+.campusHeader {
+  margin-bottom: 80px;
+}
+
+.sectionLabel {
+  margin-bottom: 25px;
+  color: #d6b46a;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.campus h2 {
+  font-size: clamp(50px, 8vw, 100px);
+  line-height: 0.9;
+  letter-spacing: -5px;
+}
+
+.campus h2 span {
+  color: #d6b46a;
+}
+
+.campusGrid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  grid-template-rows: 300px 300px;
+  gap: 20px;
+}
+
+.campusLargeReveal {
+  grid-row: span 2;
+}
+
+.campusCard {
+  min-height: 300px;
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #24352b;
+  border: 1px solid rgba(245, 241, 232, 0.08);
+  transition: transform 0.4s ease, background 0.4s ease;
+}
+
+.campusCard:hover {
+  transform: translateY(-8px);
+  background: #2c4033;
+}
+
+.campusLarge {
+  min-height: 620px;
+  height: 100%;
+}
+
+.campusCard span {
+  color: #d6b46a;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.campusCard h3 {
+  margin-top: 20px;
+  font-size: 30px;
+  letter-spacing: -1px;
+}
+
+.campusCard p {
+  color: #b8c1b9;
+  font-size: 15px;
+  line-height: 1.7;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+/* Dark mode */
+
+:global(main.dark-mode) .campus {
+  background: #0d130f;
+}
+
+:global(main.dark-mode) .campusCard {
+  background: #17251d;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .campus {
+    padding: 100px 25px;
+  }
+
+  .campusGrid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .campusLargeReveal {
+    grid-row: auto;
+  }
+
+  .campusLarge {
+    min-height: 350px;
+    height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .campus {
+    padding: 80px 20px;
+  }
+
+  .campus h2 {
+    letter-spacing: -3px;
+  }
+
+  .campusCard {
+    min-height: 280px;
+    padding: 25px;
+  }
+
+  .campusLarge {
+    min-height: 280px;
+  }
+}

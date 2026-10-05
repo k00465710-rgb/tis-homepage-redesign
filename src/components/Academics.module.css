@@ -1,0 +1,109 @@
+.academics {
+  padding: 130px 40px;
+  background: #e8e2d5;
+}
+
+.academicsHeader {
+  margin-bottom: 80px;
+}
+
+.sectionLabel {
+  margin-bottom: 25px;
+  color: #a47d2e;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.academics h2 {
+  font-size: clamp(50px, 8vw, 100px);
+  line-height: 0.9;
+  letter-spacing: -5px;
+}
+
+.academics h2 span {
+  color: #657267;
+}
+
+.academicCards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.academicCard {
+  min-height: 320px;
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #17251d;
+  color: #f5f1e8;
+  border-radius: 4px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.academicCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(23, 37, 29, 0.18);
+}
+
+.academicCard span {
+  color: #d6b46a;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.academicCard h3 {
+  margin-top: auto;
+  margin-bottom: 25px;
+  font-size: 28px;
+  letter-spacing: -1px;
+}
+
+.academicCard p {
+  color: #b8c1b9;
+  font-size: 15px;
+  line-height: 1.7;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+/* Dark mode only */
+
+:global(main.dark-mode) .academics {
+  background: #17251d;
+  color: #f5f1e8;
+}
+
+:global(main.dark-mode) .academicCard {
+  background: #26372c;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .academics {
+    padding: 100px 25px;
+  }
+
+  .academicCards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .academics {
+    padding: 80px 20px;
+  }
+
+  .academics h2 {
+    letter-spacing: -3px;
+  }
+
+  .academicCard {
+    min-height: 280px;
+    padding: 25px;
+  }
+}

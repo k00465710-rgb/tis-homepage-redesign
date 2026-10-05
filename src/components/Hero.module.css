@@ -1,0 +1,88 @@
+.hero {
+  min-height: 100vh;
+  padding: 180px 40px 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #17251d;
+  color: #f5f1e8;
+}
+
+.heroLabel {
+  margin-bottom: 30px;
+  color: #d6b46a;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  max-width: 1000px;
+  font-size: clamp(70px, 12vw, 150px);
+  line-height: 0.85;
+  letter-spacing: -8px;
+}
+
+.hero h1 span {
+  color: #d6b46a;
+}
+
+.heroDescription {
+  margin-top: 40px;
+  color: #b8c1b9;
+  font-size: 20px;
+  line-height: 1.6;
+  letter-spacing: 0;
+}
+
+.heroButton {
+  width: fit-content;
+  margin-top: 35px;
+  padding: 15px 28px;
+  border: 1px solid #d6b46a;
+  border-radius: 30px;
+  background: transparent;
+  color: #f5f1e8;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.heroButton:hover {
+  background: #d6b46a;
+  color: #17251d;
+  transform: translateY(-3px);
+}
+
+/* Dark mode only — does NOT change alignment */
+
+:global(main.dark-mode) .hero {
+  background: #0d130f;
+}
+
+:global(main.dark-mode) .heroDescription {
+  color: #b8c1b9;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .hero {
+    padding: 150px 25px 90px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 130px 20px 80px;
+  }
+
+  .hero h1 {
+    letter-spacing: -5px;
+  }
+}

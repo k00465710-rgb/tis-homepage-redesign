@@ -1,0 +1,108 @@
+.sports {
+  padding: 130px 40px;
+  background: #e8e2d5;
+  color: #17251d;
+}
+
+.sportsHeader {
+  max-width: 900px;
+  margin-bottom: 80px;
+}
+
+.sectionLabel {
+  margin-bottom: 25px;
+  color: #a47d2e;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.sports h2 {
+  font-size: clamp(50px, 8vw, 100px);
+  line-height: 0.9;
+  letter-spacing: -5px;
+}
+
+.sports h2 span {
+  color: #657267;
+}
+
+.sportsIntro {
+  max-width: 650px;
+  margin-top: 35px;
+  color: #596158;
+  font-size: 18px;
+  line-height: 1.7;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.sportsList {
+  border-top: 1px solid #b9b2a5;
+}
+
+.sportItem {
+  padding: 30px 0;
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  align-items: center;
+  border-bottom: 1px solid #b9b2a5;
+  transition: padding-left 0.3s ease, background 0.3s ease;
+}
+
+.sportItem:hover {
+  padding-left: 15px;
+}
+
+.sportItem span {
+  color: #a47d2e;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.sportItem h3 {
+  font-size: clamp(30px, 5vw, 60px);
+  letter-spacing: -2px;
+}
+
+/* Dark mode only */
+
+:global(main.dark-mode) .sports {
+  background: #17251d;
+  color: #f5f1e8;
+}
+
+:global(main.dark-mode) .sportsIntro {
+  color: #b8c1b9;
+}
+
+:global(main.dark-mode) .sportsList {
+  border-top-color: #4d5a50;
+}
+
+:global(main.dark-mode) .sportItem {
+  border-bottom-color: #4d5a50;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .sports {
+    padding: 100px 25px;
+  }
+}
+
+@media (max-width: 600px) {
+  .sports {
+    padding: 80px 20px;
+  }
+
+  .sports h2 {
+    letter-spacing: -3px;
+  }
+
+  .sportItem {
+    grid-template-columns: 55px 1fr;
+  }
+}
